@@ -5,7 +5,7 @@ Created by Jiabei Zhao
 *****************/
 #ifndef POINT_H_
 #define POINT_H_
-#include"headers.h"
+#include
 class Point {
 public:
 	int ID;//point ID
@@ -15,15 +15,7 @@ public:
 
 	Point(int id, int* coords);//initialize the point
 	void reset();//Reset the point to the initial state
-	void assignToCluster(int clusterID);//assign this point to a cluster
-	bool isProcessed;//if the point is under process
-	bool isInQue;
-	double getSqrDist(Point* pt);
-	double getDist(Point* pt);
-	void showCoords();
-	vector<int>& getGridCoords(vector<int>& gridCoords, double oneOverSideLen);
-
-
+	void assignToCluster(int clusterID);//ssign this point to a cluster.
 
 
 

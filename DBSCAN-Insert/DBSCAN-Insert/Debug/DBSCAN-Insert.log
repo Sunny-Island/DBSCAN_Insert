@@ -1,0 +1,3 @@
+﻿  main.cpp
+C:\Users\Jia-Bei Zhao\Desktop\database\code\DBSCAN-Insert\DBSCAN-Insert\main.cpp(19): warning C4477: “sprintf”: 格式字符串“%d”需要类型“int”的参数，但可变参数 1 拥有了类型“double”
+  DBSCAN-Insert.vcxproj -> C:\Users\Jia-Bei Zhao\Desktop\database\code\DBSCAN-Insert\Debug\DBSCAN-Insert.exe
