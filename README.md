@@ -4,6 +4,7 @@ This is a algorithm modified from approximation DBSCAN method.
 
 <br />
 paper PDF:https://www.cse.cuhk.edu.hk/~taoyf/paper/sigmod15-dbscan.pdf
+
 <br />
 update in 2019.4.10: add point to this project;
 
