@@ -21,7 +21,7 @@
 #include <time.h>
 
 
-//#include "GlobalVar.h"
+#include "GlobalVar.h"
 
 using namespace std;
 

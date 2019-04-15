@@ -80,3 +80,58 @@ void Rectangle::setMaxCoords(const int* maxCoords)
 		this->maxValues[i] = maxCoords[i];
 	}
 }
+
+int Rectangle::stateWithSphere(Point* q, double r)
+{
+	int dim = DIM;
+	long long closestDist = 0;
+	long long farthestDist = 0;
+	long long temp = 0;
+	long long temp2 = 0;
+	long long sqr_temp = 0;
+	long long sqr_temp2 = 0;
+	double sqr_r = r * r;
+
+	// Find the distances from the closest and farthest points to q in this grid cell.
+	for (int i = 0; i < dim; i++) {
+		temp = this->minValues[i] - q->coords[i];
+		temp2 = this->maxValues[i] - q->coords[i];
+		sqr_temp = temp * temp;
+		sqr_temp2 = temp2 * temp2;
+
+		if (temp > 0) {
+			// q is to the left of this rectangle in this dimension
+			closestDist += sqr_temp;
+		}
+		else if (temp2 < 0) {
+			// q is to the right of this rectangle in this dimension
+			closestDist += sqr_temp2;
+		}
+		farthestDist += (sqr_temp <= sqr_temp2 ? sqr_temp2 : sqr_temp);
+	}
+
+	if (closestDist <= sqr_r) {
+		if (farthestDist <= sqr_r)
+			return 1; // fully inside
+		return 0; // intersect
+	}
+	return -1; // fully outside
+}
+
+void Rectangle::showRectangle()
+{
+	int dim = DIM;
+	printf("The rectangle is bounded by: ");
+	printf("(");
+	for (int i = 0; i < dim - 1; i++) {
+		printf("%d, ", this->minValues[i]);
+	}
+	printf("%d)\t", this->minValues[dim - 1]);
+
+	printf("(");
+	for (int i = 0; i < dim - 1; i++) {
+		printf("%d, ", this->maxValues[i]);
+	}
+	printf("%d)\n", this->maxValues[dim - 1]);
+
+}
