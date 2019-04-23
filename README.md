@@ -21,6 +21,10 @@ update in 2019.4.15: add zorder hashing and offset to this project;
 progress: 20%
 </br>
 </br>
+update in 2019.4.23:add datagenerator.
+An example of dat(1,000 points)：
+
+
 
 Authro: Jiabei Zhao
 </br>
