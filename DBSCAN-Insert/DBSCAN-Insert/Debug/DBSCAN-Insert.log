@@ -1,3 +1,4 @@
 ﻿  main.cpp
-C:\Users\Jia-Bei Zhao\Desktop\database\code\DBSCAN-Insert\DBSCAN-Insert\main.cpp(19): warning C4477: “sprintf”: 格式字符串“%d”需要类型“int”的参数，但可变参数 1 拥有了类型“double”
+C:\Users\Jia-Bei Zhao\Desktop\database\code\DBSCAN-Insert\DBSCAN-Insert\main.cpp(9): warning C4005: “_CRT_SECURE_NO_WARNINGS”: 宏重定义
+  C:\Users\Jia-Bei Zhao\Desktop\database\code\DBSCAN-Insert\DBSCAN-Insert\main.cpp: note: 参见“_CRT_SECURE_NO_WARNINGS”的前一个定义
   DBSCAN-Insert.vcxproj -> C:\Users\Jia-Bei Zhao\Desktop\database\code\DBSCAN-Insert\Debug\DBSCAN-Insert.exe
