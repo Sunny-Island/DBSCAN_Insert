@@ -30,7 +30,9 @@ An example of data(1,000 points)：
 update in 2019.4.23: add GridCells and approDBSCAN. Still unfinished.
 </br>
 </br>
-
+Barrier nowadays is how to build proper structure for GridCell in high dimensions.
+</br>
+</br>
 
 Author: Jiabei Zhao
 </br>
