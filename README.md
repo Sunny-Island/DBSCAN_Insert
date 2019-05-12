@@ -29,8 +29,9 @@ An example of data(1,000 points)：
 </br>
 update in 2019.4.23: add GridCells and approDBSCAN. Still unfinished.
 </br>
-
-
-Authro: Jiabei Zhao
 </br>
-In Toronto.
+
+
+Author: Jiabei Zhao
+</br>
+In Beijing.
