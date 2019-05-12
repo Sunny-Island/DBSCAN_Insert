@@ -56,6 +56,12 @@ extern int K;
 extern double PHI;
 
 /*
+*	Range of the coordinate in d-dimension
+*/
+extern int COOR_START ;
+extern int COOR_END ;
+
+/*
  *  The flag that whether to use the O(nk) algorithm for core point identification.
  *  If YES, this variable is TRUE. Otherwise, it is FALSE.
  */

@@ -1,4 +1,3 @@
-﻿  main.cpp
-C:\Users\Jia-Bei Zhao\Desktop\database\code\DBSCAN-Insert\DBSCAN-Insert\main.cpp(9): warning C4005: “_CRT_SECURE_NO_WARNINGS”: 宏重定义
-  C:\Users\Jia-Bei Zhao\Desktop\database\code\DBSCAN-Insert\DBSCAN-Insert\main.cpp: note: 参见“_CRT_SECURE_NO_WARNINGS”的前一个定义
+﻿  ApproDBSCAN.cpp
+C:\Users\Jia-Bei Zhao\Desktop\database\code\DBSCAN-Insert\DBSCAN-Insert\ApproDBSCAN.cpp(18): warning C4244: “初始化”: 从“double”转换到“int”，可能丢失数据
   DBSCAN-Insert.vcxproj -> C:\Users\Jia-Bei Zhao\Desktop\database\code\DBSCAN-Insert\Debug\DBSCAN-Insert.exe

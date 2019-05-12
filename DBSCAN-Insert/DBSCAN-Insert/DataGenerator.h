@@ -10,6 +10,7 @@ Created by Jiabei Zhao
 #define DATAGENERATOR_H_
 
 #include "headers.h"
+#include"GlobalVar.h"
 #include <random>
 #include <fstream>
 using namespace std;

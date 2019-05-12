@@ -39,6 +39,12 @@
     <ClInclude Include="DataGenerator.h">
       <Filter>头文件</Filter>
     </ClInclude>
+    <ClInclude Include="GridCell.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="ApproDBSCAN.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Point.cpp">
@@ -57,6 +63,12 @@
       <Filter>源文件</Filter>
     </ClCompile>
     <ClCompile Include="DataGenerator.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="GridCell.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="ApproDBSCAN.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
   </ItemGroup>

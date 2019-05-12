@@ -1,10 +1,13 @@
 /*
- * headers.h
+ * main.cpp
  *
  *  Created on: April 11, 2019
  *      Author: Jiabei Zhao
  *		In Toronto
  */
+
+
+
 #define _CRT_SECURE_NO_DEPRECATE
 #define _CRT_SECURE_NO_WARNINGS
 #include<iostream>
@@ -33,7 +36,11 @@ int main()
 	vector<int> ates = { 1,2,3,4,5 };
 
 	char file[] = "jiabei_test";
-	genDatasetToFile(file, 2, 1000, 5, 10, 0, 100, 5);
+	//genDatasetToFile(file, 2, 1000, 5, 10, COOR_START, COOR_END, 5);
+	cout << 3 / 2;
+
+
+
 
 	return 0;
 

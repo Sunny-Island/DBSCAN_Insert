@@ -74,7 +74,7 @@
     <ClCompile>
       <WarningLevel>Level3</WarningLevel>
       <Optimization>Disabled</Optimization>
-      <SDLCheck>true</SDLCheck>
+      <SDLCheck>false</SDLCheck>
       <ConformanceMode>true</ConformanceMode>
       <AdditionalOptions>/D_CRT_SECURE_NO_WARNINGS %(AdditionalOptions)</AdditionalOptions>
     </ClCompile>
@@ -124,8 +124,10 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClInclude Include="ApproDBSCAN.h" />
     <ClInclude Include="DataGenerator.h" />
     <ClInclude Include="GlobalVar.h" />
+    <ClInclude Include="GridCell.h" />
     <ClInclude Include="headers.h" />
     <ClInclude Include="Point.h" />
     <ClInclude Include="Rectangle.h" />
@@ -134,9 +136,13 @@
     <ClInclude Include="Zorder.h" />
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="ApproDBSCAN.cpp" />
     <ClCompile Include="DataGenerator.cpp" />
     <ClCompile Include="GlobalVar.cpp" />
-    <ClCompile Include="main.cpp" />
+    <ClCompile Include="GridCell.cpp" />
+    <ClCompile Include="main.cpp">
+      <SDLCheck Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">false</SDLCheck>
+    </ClCompile>
     <ClCompile Include="Point.cpp" />
     <ClCompile Include="Rectangle.cpp" />
     <ClCompile Include="Zorder.cpp" />

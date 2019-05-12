@@ -5,6 +5,7 @@ Created by Jiabei Zhao
 *****************/
 
 #include "DataGenerator.h"
+#include"GlobalVar.h"
 #define _CRT_SECURE_NO_WARNINGS
 #define PI 3.14159265358979323846
 double genUniformRandom(double rangeStart, double rangeEnd) {
@@ -45,6 +46,10 @@ void genPtFromGaussian(vector<int>& center, double sigma, int dim,
 			v = genGaussianRandom();
 			v *= sigma;
 			targetPlace[i] = center[i] + (int)(v + 0);
+			if (targetPlace[i] > COOR_END)
+				targetPlace[i] = COOR_END;
+			if (targetPlace[i] < COOR_START)
+				targetPlace[i] = COOR_START;
 		} while (targetPlace[i] < 0);
 	}
 }

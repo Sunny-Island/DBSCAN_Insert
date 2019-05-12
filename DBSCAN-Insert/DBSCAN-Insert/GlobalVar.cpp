@@ -38,12 +38,12 @@ int N = -1;
 /*
  *  The dimensionality of points.
  */
-int DIM = -1;
+int DIM = 3;
 
 /*
  *  The radius parameter for DBSCAN.
  */
-double R = -1;
+double R = 1;
 
 /*
  *  The core point threshold.
@@ -83,6 +83,13 @@ bool USE_SPACE_PRIOR = false;
  *  If a value is smaller than this threshold, then we regard this value is a constant.
  */
 int CONSTANT_THRESHOLD = 100;
+
+/*
+*	Range of the coordinate in d-dimension
+*/
+int COOR_START = 0;
+int COOR_END = 100;
+
 
 /*
  *  All possible offsets for getting neighboring cells with non-negative coordinates.
