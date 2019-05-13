@@ -1,3 +1,11 @@
 ﻿  ApproDBSCAN.cpp
+C:\Users\Jia-Bei Zhao\Desktop\database\code\DBSCAN-Insert\DBSCAN-Insert\ApproDBSCAN.h(13): warning C4200: 使用了非标准扩展: 结构/联合中的零大小数组
+  C:\Users\Jia-Bei Zhao\Desktop\database\code\DBSCAN-Insert\DBSCAN-Insert\ApproDBSCAN.h(13): note: 默认构造函数或 copy/move 赋值运算符将忽略此成员
 C:\Users\Jia-Bei Zhao\Desktop\database\code\DBSCAN-Insert\DBSCAN-Insert\ApproDBSCAN.cpp(18): warning C4244: “初始化”: 从“double”转换到“int”，可能丢失数据
+C:\Users\Jia-Bei Zhao\Desktop\database\code\DBSCAN-Insert\DBSCAN-Insert\ApproDBSCAN.cpp(34): warning C4244: “=”: 从“double”转换到“int”，可能丢失数据
+C:\Users\Jia-Bei Zhao\Desktop\database\code\DBSCAN-Insert\DBSCAN-Insert\ApproDBSCAN.cpp(35): warning C4244: “=”: 从“double”转换到“int”，可能丢失数据
+C:\Users\Jia-Bei Zhao\Desktop\database\code\DBSCAN-Insert\DBSCAN-Insert\ApproDBSCAN.cpp(38): warning C4244: “=”: 从“double”转换到“int”，可能丢失数据
+C:\Users\Jia-Bei Zhao\Desktop\database\code\DBSCAN-Insert\DBSCAN-Insert\ApproDBSCAN.cpp(43): warning C4244: “=”: 从“double”转换到“int”，可能丢失数据
+C:\Users\Jia-Bei Zhao\Desktop\database\code\DBSCAN-Insert\DBSCAN-Insert\ApproDBSCAN.cpp(60): warning C4244: “初始化”: 从“double”转换到“int”，可能丢失数据
+C:\Users\Jia-Bei Zhao\Desktop\database\code\DBSCAN-Insert\DBSCAN-Insert\ApproDBSCAN.cpp(34): warning C4700: 使用了未初始化的局部变量“Child”
   DBSCAN-Insert.vcxproj -> C:\Users\Jia-Bei Zhao\Desktop\database\code\DBSCAN-Insert\Debug\DBSCAN-Insert.exe

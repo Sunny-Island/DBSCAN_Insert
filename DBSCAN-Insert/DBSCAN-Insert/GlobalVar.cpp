@@ -38,7 +38,7 @@ int N = -1;
 /*
  *  The dimensionality of points.
  */
-int DIM = 3;
+int DIM = 2;
 
 /*
  *  The radius parameter for DBSCAN.

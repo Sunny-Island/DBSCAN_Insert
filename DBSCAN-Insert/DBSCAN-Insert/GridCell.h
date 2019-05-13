@@ -28,8 +28,9 @@ public:
 	bool isprocessed;
 	vector<GridCell*> child;
 	int ChildNumber;
+	~GridCell();
 
-	GridCell();
+
 
 };
 

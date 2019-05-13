@@ -36,8 +36,8 @@ int main()
 	vector<int> ates = { 1,2,3,4,5 };
 
 	char file[] = "jiabei_test";
-	//genDatasetToFile(file, 2, 1000, 5, 10, COOR_START, COOR_END, 5);
-	cout << 3 / 2;
+	//genDatasetToFile(file, DIM, 1000, 5, 10, COOR_START, COOR_END, 5);
+	cout << floor(3 / 2.1);
 
 
 
