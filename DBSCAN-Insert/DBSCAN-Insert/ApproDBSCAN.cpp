@@ -6,6 +6,7 @@ Created by Jiabei Zhao
 ********/
 
 #include"ApproDBSCAN.h"
+#include<stack>
 #define _SILENCE_STDEXT_HASH_DEPRECATION_WARNINGS 
 
 
@@ -144,11 +145,23 @@ int ApproDBSCAN::RangeQuery(Point* p)
 {
 	int ans = 0;
 	double FirstLen = R / sqrt(DIM);
+	int firstSize = ceil(root->sideLen / FirstLen);
 	int i = floor(p->coords[0] / FirstLen);
 	int j = floor(p->coords[1] / FirstLen);
 
-	//
-	ans+=Query( p,  FirstGridTable[i][j]);
+	//待修改，增添邻接矩阵
+	int startx = i - 2 < 0 ? 0 : i - 2;
+	int endx = i + 2 > firstSize-1 ? firstSize-1 : i + 2;
+	int starty = j - 2 < 0 ? 0 : j - 2;
+	int endy = j + 2 > firstSize-1 ? firstSize-1 : j + 2;
+	for (int m = startx;m <= endx;m++)
+	{
+		for (int n = starty;n <= endy;n++)
+		{
+			ans += Query(p, FirstGridTable[m][n]);
+		}
+	}
+	
 	return ans;
 }
 
@@ -210,14 +223,25 @@ bool ApproDBSCAN::EdgeAddable(GridCell* g1, GridCell* g2)
 	{
 		return false;
 	}
-	if (coremum2 <= coremum1)//check every point in g2
+	if (coremum2 <= corenum1)//check every point in g2
 	{
-
+		int size = g2->size;
+		for (int i = 0;i < size;i++)
+		{
+			if (g2->ptList[i]->isCore&&nonEmptinessOnCore(g1, g2->ptList[i]))
+				return true;
+		}
 	}
 	else
 	{
-
+		int size = g1->size;
+		for (int i = 0;i < size;i++)
+		{
+			if (g1->ptList[i]->isCore && nonEmptinessOnCore(g2, g1->ptList[i]))
+				return true;
+		}
 	}
+	return false;
 }
 bool ApproDBSCAN::nonEmptinessOnCore(GridCell* g, Point* p)
 {
@@ -280,14 +304,62 @@ void ApproDBSCAN::BuildEdge()
 
 	double FirstLen = R / sqrt(DIM);
 	int firstSize = ceil(RootLen / FirstLen);
-	for ()
-	{
 
+	for (int i = 0;i<firstSize;i++)
+	{
+		for (int j = 0;j < firstSize;j++)
+		{
+			int startx = i - 2 < 0 ? 0 : i - 2;
+			int endx = i + 2 > firstSize - 1 ? firstSize - 1 : i + 2;
+			int starty = j - 2 < 0 ? 0 : j - 2;
+			int endy = j + 2 > firstSize - 1 ? firstSize - 1 : j + 2;
+			for (int m = startx;m < endx;m++)
+			{
+				for (int n = starty;n < endy;n++)
+				{
+					if (EdgeAddable(FirstGridTable[i][j], FirstGridTable[m][n]))
+					{
+						FirstGridTable[i][j]->BuildEdge(FirstGridTable[m][n]);
+						FirstGridTable[m][n]->BuildEdge(FirstGridTable[i][j]);
+					}
+				}
+			}
+			
+		}
 	}
 }
 
+void ApproDBSCAN::assignCluster_DFS()
+{
+	int cluster = 0;
+	stack<GridCell*> stack;
+	int RootLen = COOR_END - COOR_START;
+
+	double FirstLen = R / sqrt(DIM);
+	int firstSize = ceil(RootLen / FirstLen);
+	for (int i = 0;i < firstSize;i++)
+	{
+		for (int j = 0;j < firstSize;j++)
+		{
+			if(FirstGridTable[i][j]->ID!=-1)
+			stack.push(FirstGridTable[i][j]);
+			while (!stack.empty())
+			{
+				GridCell* p = stack.top();
+			}
+			
+		}
+	}
+	
+	GridCell* p = stack.top();
+	stack.pop();
+	vector<GridCell*>::iterator it = p->Edge.begin();
+	(*it)->ID = cluster;
+	stack.push(*it);
+	it++;
+	if (stack.empty())//空了之后放新的进去，直至遍历所有未被遍历的GridCell
+		stack.push();
+		cluster++;
 
 
-
-
-
+}

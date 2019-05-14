@@ -17,7 +17,9 @@ class ApproDBSCAN {
 	int Query(Point* p, GridCell* g);
 	void DetermainCorePoints();
 	void BuildEdge();
-	void assignCluster();
+	void assignCluster_DFS();//深搜，栈，搜到的点全部赋同一个值
+	bool EdgeAddable(GridCell* g1, GridCell* g2);
+	bool nonEmptinessOnCore(GridCell* g, Point* p);
 
 
 

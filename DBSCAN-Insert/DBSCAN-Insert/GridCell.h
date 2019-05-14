@@ -24,11 +24,17 @@ public:
 	int level;
 	int sideLen;
 	void insertPointToCell(Point* pt);
+	vector<GridCell*> Edge;
 	bool isLeaf;
 	bool isprocessed;
-	vector<GridCell*> child;
+	bool isCore;
+	GridCell* child1 = NULL;
+	GridCell* child2 = NULL;
+	GridCell* child3 = NULL;
+	GridCell* child4 = NULL;
 	int ChildNumber;
 	~GridCell();
+	void BuildEdge(GridCell* g);
 
 
 
